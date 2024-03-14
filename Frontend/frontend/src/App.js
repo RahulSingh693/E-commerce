@@ -1,10 +1,21 @@
-import './App.css';
+import "./App.css";
+import { Login } from "./Components/Login/Login";
+import Navigation from "./Components/Navigation/Navigation";
+import Signup from "./Components/Signup/Signup";
+import HomePage from "./Pages/HomePage/HomePage";
 
 function App() {
   return (
-    <>
-      <h1 className="text-ellipsis text-xl text-center">React App</h1>
-    </>
+    <div className="App">
+      <div className="w-full">
+        <Navigation />
+        <div>
+          {/* <Signup /> */}
+          {/* <Login /> */}
+          <HomePage />
+        </div>
+      </div>
+    </div>
   );
 }
 
