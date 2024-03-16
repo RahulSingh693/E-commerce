@@ -31,7 +31,7 @@ const HomeCarousel = ({data, id, title}) => {
 
   return (
     <div className=" bg-white py-4">
-      <div className=" text-3xl pb-4 font-semibold from-neutral-600 pl-8">{title}</div>
+      <div className=" text-2xl pb-4 font-semibold from-neutral-600 pl-8">{title}</div>
       {/*<!-- Component: Carousel with controls inside --> */}
       <div className={`glide-${id} relative w-full`}>
         {/*    <!-- Slides --> */}

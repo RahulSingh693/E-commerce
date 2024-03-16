@@ -34,7 +34,7 @@ const Curousel = () => {
               <div key={item.id}>
                 <img
                   src={item.img}
-                  className="w-full cursor-pointer h-80 object-cover"
+                  className="w-full cursor-pointer h-96 object-cover object-center contrast-[130%]"
                   alt={item.title}
                   role="presentation"
                 />
