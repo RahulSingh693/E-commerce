@@ -1,8 +1,11 @@
 import "./App.css";
+import Footer from "./Components/Footer/Footer";
 import { Login } from "./Components/Login/Login";
 import Navigation from "./Components/Navigation/Navigation";
 import Signup from "./Components/Signup/Signup";
 import HomePage from "./Pages/HomePage/HomePage";
+import ProductPage from "./Pages/Product/ProductPage";
+import ProductDetails from "./Pages/ProductDetails/ProductDetails";
 
 function App() {
   return (
@@ -12,8 +15,11 @@ function App() {
         <div>
           {/* <Signup /> */}
           {/* <Login /> */}
-          <HomePage />
+          {/* <HomePage /> */}
+          {/* <ProductPage /> */}
+          <ProductDetails />
         </div>
+        <Footer />
       </div>
     </div>
   );

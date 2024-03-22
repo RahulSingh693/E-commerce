@@ -2,8 +2,7 @@ import React from "react";
 
 const HomeCards = ({index, image, title, brand}) => {
   return (
-    <div key={index} className="cursor-pointer flex flex-col items-center rounded-sm overflow-hidden mx-5 mb-2 hover:shadow-md hover:shadow-slate-100 w-[15rem] bg-white
-    border border-gray-100">
+    <div key={index} className="cursor-pointer flex flex-col items-center rounded-sm overflow-hidden mx-5 mb-2 hover:shadow-md hover:shadow-slate-100 w-[15rem] bg-white border border-gray-100">
       <div className="w-[90%] h-[18rem]">
         <img
           src={image}

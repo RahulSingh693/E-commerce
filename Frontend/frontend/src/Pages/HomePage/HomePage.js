@@ -4,7 +4,6 @@ import HomeCarousel from "../../Components/HomeCard/HomeCarousel";
 import { kurtaPage1 } from "../../Data/Kurta/kurta";
 import { mens_kurta } from "../../Data/Men/men_kurta";
 import {mensPantsPage1} from "../../Data/pants/men_page1";
-import Footer from "../../Components/Footer/Footer";
 
 const HomePage = () => {
   return (
@@ -18,7 +17,6 @@ const HomePage = () => {
         <HomeCarousel data={mens_kurta} />
         <HomeCarousel data={mens_kurta} /> */}
       </div>
-      <Footer />
     </div>
   );
 };
