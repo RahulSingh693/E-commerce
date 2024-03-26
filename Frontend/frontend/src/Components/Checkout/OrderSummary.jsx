@@ -1,16 +1,21 @@
 import React from 'react';
-import CartCard from '../../Components/CartCard';
-import { Button } from '@mui/material';
+import AddressCard from './AddressCard';
+import CartCard from "../CartCard";
+import Button from '@mui/material/Button';
 
-const CartPage = () => {
+const OrderSummary = () => {
   return (
-    <div className=' bg-slate-50 grid grid-cols-3 space-x-6 lg:px-16 px-5 py-10'>
+    <div className='flex flex-col bg-white'>
+        <div className='border border-slate-200 px-2 py-4 rounded-md'><AddressCard /></div>
+
+
+        <div className=' grid grid-cols-3 space-x-6 py-10'>
         <div className=' col-span-2'>
             {[1,2,3].map((item) =>  <CartCard key={item} />)}
         </div>
 
         <div className=' col-span-1 py-1'>
-            <div className='bg-white p-5 rounded-sm'>
+            <div className='bg-white p-5 rounded-md border border-slate-100'>
                 <h1 className='text-lg font-semibold text-slate-700 pb-1'>PRICE DETAILS</h1>
                 <div className='border border-dashed border-slate-200 my-2'></div>
                 <div className='flex justify-between pt-4'>
@@ -37,7 +42,8 @@ const CartPage = () => {
             </div>
         </div>
     </div>
+    </div>
   )
 }
 
-export default CartPage;
+export default OrderSummary;
