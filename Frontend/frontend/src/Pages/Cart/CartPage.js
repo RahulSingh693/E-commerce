@@ -9,8 +9,8 @@ const CartPage = () => {
             {[1,2,3].map((item) =>  <CartCard key={item} />)}
         </div>
 
-        <div className=' col-span-1 py-1'>
-            <div className='bg-white p-5 rounded-sm'>
+        <div className=' col-span-1 py-1 '>
+            <div className='bg-white p-5 rounded-sm h-auto sticky top-8'>
                 <h1 className='text-lg font-semibold text-slate-700 pb-1'>PRICE DETAILS</h1>
                 <div className='border border-dashed border-slate-200 my-2'></div>
                 <div className='flex justify-between pt-4'>
