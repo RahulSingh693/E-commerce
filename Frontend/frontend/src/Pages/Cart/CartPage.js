@@ -1,8 +1,14 @@
 import React from 'react';
 import CartCard from '../../Components/CartCard';
 import { Button } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const CartPage = () => {
+    const navigate = useNavigate();
+    const handleClick = () => {
+        navigate("/checkout?step=1");
+    }
+    
   return (
     <div className=' bg-slate-50 grid grid-cols-3 space-x-6 lg:px-16 px-5 py-10'>
         <div className=' col-span-2'>
@@ -31,7 +37,7 @@ const CartPage = () => {
                     <h1 className='text-base font-bold text-slate-800'>₹6,040</h1>
                 </div>
                 <div className='pt-5'>
-                <Button variant="contained" sx={{backgroundColor: "#150202",color: "#fff","&:hover": { backgroundColor: "#150202",boxShadow:"none"}}}
+                <Button onClick={handleClick} variant="contained" sx={{backgroundColor: "#150202",color: "#fff","&:hover": { backgroundColor: "#150202",boxShadow:"none"}}}
                     className="w-full bg-slate-800 text-white py-2 my-4 rounded-sm hover:bg-slate-700">Place Order</Button>
                 </div>
             </div>

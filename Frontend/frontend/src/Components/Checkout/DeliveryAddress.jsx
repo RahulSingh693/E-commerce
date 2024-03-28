@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import AddressCard from './AddressCard';
 import { Button, Divider, TextField } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const DeliveryAddress = () => {
   const [data, setData] = useState({});
@@ -16,7 +17,13 @@ const DeliveryAddress = () => {
       phone: e.target.Phone.value
     }
     setData(data);
+    navigate("/checkout?step=2");
   }
+
+  const navigate = useNavigate();
+    const handleClick = () => {
+        navigate("/checkout?step=2");
+    }
 
   return (
     <div className='flex flex-col gap-4 items-center lg:px-10 px-5 '>
@@ -24,13 +31,13 @@ const DeliveryAddress = () => {
         <div className='border border-slate-200 w-full rounded-sm pb-2'>
           <AddressCard item={data} />
           <div className='w-1/6 ml-11'>
-            <Button type='submit' variant="contained" sx={{height:"100%", backgroundColor: "#150202",color: "#fff","&:hover": { backgroundColor: "#150202",boxShadow:"none"}}}className="w-full bg-slate-800 text-white py-2 my-4 rounded-sm hover:bg-slate-700">Deliver Here</Button>
+            <Button onClick={handleClick} type='submit' variant="contained" sx={{height:"100%", backgroundColor: "#150202",color: "#fff","&:hover": { backgroundColor: "#150202",boxShadow:"none"}}}className="w-full bg-slate-800 text-white py-2 my-4 rounded-sm hover:bg-slate-700">Deliver Here</Button>
           </div>
         </div>
         <div className='border border-slate-200 w-full rounded-sm pb-2'>
           <AddressCard item={data} />
           <div className='w-1/6 ml-11'>
-            <Button type='submit' variant="contained" sx={{height:"100%", backgroundColor: "#150202",color: "#fff","&:hover": { backgroundColor: "#150202",boxShadow:"none"}}}className="w-full bg-slate-800 text-white py-2 my-4 rounded-sm hover:bg-slate-700">Deliver Here</Button>
+            <Button onClick={handleClick} type='submit' variant="contained" sx={{height:"100%", backgroundColor: "#150202",color: "#fff","&:hover": { backgroundColor: "#150202",boxShadow:"none"}}}className="w-full bg-slate-800 text-white py-2 my-4 rounded-sm hover:bg-slate-700">Deliver Here</Button>
           </div>
         </div>
 
@@ -54,7 +61,7 @@ const DeliveryAddress = () => {
               <div className='w-[90%] lg:w-5/12'><TextField  required id='Phone' name='Phone' label="Phone Number" fullWidth   autoComplete=''/></div>
             </div>
 
-            <div className=' w-1/3 h-14 mb-9 mt-2'><Button type='submit' variant="contained" sx={{height:"100%", backgroundColor: "#150202",color: "#fff","&:hover": { backgroundColor: "#150202",boxShadow:"none"}}}
+            <div className=' w-1/3 h-14 mb-9 mt-2'><Button  type='submit' variant="contained" sx={{height:"100%", backgroundColor: "#150202",color: "#fff","&:hover": { backgroundColor: "#150202",boxShadow:"none"}}}
                     className="w-full bg-slate-800 text-white py-2 my-4 rounded-sm hover:bg-slate-700">Deliver Here</Button></div>
           </form>
         </div>

@@ -1,9 +1,12 @@
 import { Grid } from '@mui/material';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const OrderCard = () => {
+  const navigate = useNavigate();
+
   return (
-    <div className='w-full p-4 border border-gray-100 rounded-md shadow-sm cursor-pointer'>
+    <div onClick={() => navigate(`/account/order/${69}`)} className='w-full p-4 border border-gray-100 rounded-md shadow-sm cursor-pointer'>
         <Grid container justifyContent={"space-between"}>
           <Grid items xs={4}>
             <div className='w-full flex justify-around'>

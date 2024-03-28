@@ -1,7 +1,7 @@
 import React from "react";
 import { Divider, Grid } from "@mui/material";
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
-import OrderCard from "../../Components/OrderCard";
+import OrderCard from "../../Components/Orders/OrderCard";
 
 const Order = () => {
   const orders = [
@@ -12,6 +12,7 @@ const Order = () => {
   ];
   return (
     <div className="my-5 mx-4">
+      <p className="text-2xl font-semibold pb-5 px-1">My Orders</p>
       <Grid container justifyContent={"space-between"}>
         <Grid item xs={3}>
           <div className="h-auto sticky top-5 p-6 border border-gray-100 rounded-md shadow-sm">

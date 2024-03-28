@@ -1,33 +1,13 @@
 import "./App.css";
-import Navigation from "./Components/Navigation/Navigation";
-import Footer from "./Components/Footer/Footer";
-import OrderSummary from "./Pages/Order/OrderSummary";
-// import Order from "./Pages/Order/Order";
-// import Checkout from "./Pages/Checkout/Checkout";
-// import CartPage from "./Pages/Cart/CartPage";
-// import { Login } from "./Components/Login/Login";
-// import Signup from "./Components/Signup/Signup";
-// import HomePage from "./Pages/Home/HomePage";
-// import ProductPage from "./Pages/Product/ProductPage";
-// import ProductDetails from "./Pages/ProductDetails/ProductDetails";
+import { Route, Routes } from "react-router-dom";
+import CustomerRoutes from "./Routes/CustomerRoutes";
 
 function App() {
   return (
-    <div className="App">
-      <div className="w-full">
-        <Navigation />
-        <div>
-          {/* <Signup /> */}
-          {/* <Login /> */}
-          {/* <HomePage /> */}
-          {/* <ProductPage /> */}
-          {/* <ProductDetails /> */}
-          {/* <CartPage /> */}
-          {/* <Checkout /> */}
-          <OrderSummary />
-        </div>
-        <Footer />
-      </div>
+    <div className='m-0 p-0 box-border'>
+      <Routes>
+        <Route path="/*" element={<CustomerRoutes />} />
+      </Routes>
     </div>
   );
 }

@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import Rating from "@mui/material/Rating";
-import Comments from "../../Components/Comments";
+import Comments from "../../Components/productDetails/Comments";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
 import { RadioGroup } from "@headlessui/react";
 import { Box, Grid, LinearProgress } from "@mui/material";
-import Ratings from "../../Components/Ratings";
+import Ratings from "../../Components/productDetails/Ratings";
 import {Gouns} from "../../Data/Gouns/gouns"
 import HomeCards from "../../Components/HomeCard/HomeCards";
+import { useNavigate } from "react-router-dom";
 
 const product = {
   name: "T-shirts",
@@ -94,7 +95,8 @@ const rating = [
 const ProductDetails = () => {
   const [selectedColor, setSelectedColor] = useState(product.colors[0]);
   const [selectedSize, setSelectedSize] = useState(product.sizes[2]);
-
+  const navigate = useNavigate();
+  
   return (
     <div className="bg-white">
       <div className="pt-6">
@@ -325,6 +327,7 @@ const ProductDetails = () => {
                 </div>
 
                 <button
+                  onClick={() => navigate("/cart")}
                   type="submit"
                   className="mt-10 flex w-[70%] items-center justify-center rounded-md border border-transparent bg-purple-600 px-8 py-4 text-xl font-medium text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
                 >
