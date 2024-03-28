@@ -3,7 +3,7 @@ import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Button from '../AnimatedButton/Button';
 import ecommerce_logo from "../../ecommerce_logo.png";
-import Search from '../Search';
+import Search from './Search';
 import { Tooltip } from '@mui/material';
 
 const navigation = {
