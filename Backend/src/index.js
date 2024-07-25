@@ -11,5 +11,10 @@ app.get('/', async (req, res) => {
     res.status(200).send({message: "Welcome to this api", status:true});
 });
 
+const authRouters = require('./routes/auth.routes.js');
+app.use('/auth', authRouters);
+
+const userRouters = require('./routes/user.routes.js'); 
+app.use('/users', userRouters);
 
 module.exports = app;
