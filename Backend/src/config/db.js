@@ -1,8 +1,6 @@
-const mongodbURL = "mongodb+srv://rahuls29:IUGamNQox4Ukj1oq@cluster0.zpxk9ye.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
-
 const mongoose = require('mongoose');
 
-const connectDB = async () => {
+const connectDB = async (mongodbURL) => {
     try {
         await mongoose.connect(mongodbURL);
         console.log("Connected to MongoDB");
